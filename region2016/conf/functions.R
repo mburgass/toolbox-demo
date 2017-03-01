@@ -363,7 +363,7 @@ AO = function(layers,
 
   ao_model <- ao_data %>%
     mutate(Du = (1 - need) * (1 - access)) %>%
-    mutate(status = (1 - Du) * sustainability)
+    mutate(status = (1 - Du/2) * sustainability)
   # head(ao_model); summary(ao_model)
 
   ############ STATUS ##############
